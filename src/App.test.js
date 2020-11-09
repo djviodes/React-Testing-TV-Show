@@ -5,7 +5,7 @@ import App from './App';
 import { fetchShow as mockFetchShow } from './api/fetchShow';
 jest.mock('./api/fetchShow');
 
-test('Will app render without errors', () => {
-    mockFetchShow.mockResolvedValueOnce()
+test('Fetches and renders episodes data', async () => {
+    mockFetchShow.mockResolvedValueOnce();
     render(<App />);
 });
